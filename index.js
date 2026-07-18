@@ -1,7 +1,15 @@
-import { experience, projects, education, certifications } from "./user-data/data.js";
+import { capabilities, experience, projects, education, certifications } from "./user-data/data.js?v=13";
 
 const $ = (selector) => document.querySelector(selector);
 const labels = { ai: "AI", "machine-learning": "Machine learning", analytics: "Analytics", software: "Software" };
+
+$("#capability-grid").innerHTML = capabilities.map((item, index) => `
+  <article class="capability-card reveal" style="--delay:${index * 55}ms">
+    <div class="capability-number">${item.icon}</div>
+    <h3>${item.title}</h3>
+    <p>${item.description}</p>
+    <div class="tag-list capability-tools">${item.tools.map(tool => `<span>${tool}</span>`).join("")}</div>
+  </article>`).join("");
 
 $("#experience-list").innerHTML = experience.map((item, index) => `
   <article class="experience-item reveal" style="--delay:${index * 70}ms">
@@ -11,6 +19,7 @@ $("#experience-list").innerHTML = experience.map((item, index) => `
       <h3>${item.role}</h3>
       <strong>${item.organization}</strong>
       <p>${item.summary}</p>
+      <ul class="detail-list">${item.details.map(detail => `<li>${detail}</li>`).join("")}</ul>
       <div class="tag-list">${item.tags.map(tag => `<span>${tag}</span>`).join("")}</div>
     </div>
   </article>`).join("");
@@ -18,7 +27,7 @@ $("#experience-list").innerHTML = experience.map((item, index) => `
 const renderProjects = (filter = "all") => {
   const visible = filter === "all" ? projects : projects.filter(project => project.category === filter);
   $("#project-grid").innerHTML = visible.map((project, index) => `
-    <article class="project-card reveal" style="--delay:${Math.min(index * 25, 150)}ms;--image-background:${project.imageBackground || "#edf2f7"}">
+    <article class="project-card category-${project.category} reveal" style="--delay:${Math.min(index * 25, 150)}ms;--image-background:${project.imageBackground || "#edf2f7"}">
       <a class="project-thumb ${project.imageFit === "contain" ? "fit-contain" : ""}" href="${project.url}" target="_blank" rel="noreferrer" aria-label="Open ${project.title}">
         <img src="${project.image}" alt="Project image for ${project.title}" loading="lazy">
       </a>
@@ -27,7 +36,7 @@ const renderProjects = (filter = "all") => {
         <h3><a href="${project.url}" target="_blank" rel="noreferrer">${project.title}</a></h3>
         <p>${project.description}</p>
         <div class="project-footer">
-          <div class="tag-list compact-tags">${project.tags.slice(0, 2).map(tag => `<span>${tag}</span>`).join("")}</div>
+          <div class="tag-list compact-tags">${project.tags.slice(0, 3).map(tag => `<span>${tag}</span>`).join("")}</div>
           <a class="project-arrow" href="${project.url}" target="_blank" rel="noreferrer" aria-label="Open ${project.title}">&#8599;</a>
         </div>
       </div>
@@ -50,14 +59,16 @@ $("#education-list").innerHTML = education.map(item => `
       <span>${item.years}</span>
       <h3>${item.title}</h3>
       <strong>${item.school}</strong>
+      <em>${item.achievement}</em>
       <p>${item.note}</p>
+      <ul class="detail-list education-details">${item.details.map(detail => `<li>${detail}</li>`).join("")}</ul>
     </div>
   </article>`).join("");
 
 $("#certification-list").innerHTML = `<h3>Certifications</h3>` + certifications.map(item => `
   <article class="cert-card reveal">
     <div class="cert-logo"><img src="${item.logo}" alt="${item.issuer} logo"></div>
-    <div><h4>${item.title}</h4><strong>${item.issuer}</strong><span>${item.issued}</span></div>
+    <div><h4>${item.title}</h4><strong>${item.issuer}</strong><span>${item.issued}</span><p>${item.description}</p></div>
   </article>`).join("");
 
 $("#year").textContent = new Date().getFullYear();
@@ -82,11 +93,18 @@ function observeReveals() {
 
 const railLinks = [...document.querySelectorAll(".section-rail a")];
 const sections = railLinks.map(link => document.getElementById(link.dataset.section)).filter(Boolean);
-const sectionObserver = new IntersectionObserver(entries => {
-  const visibleEntry = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-  if (!visibleEntry) return;
-  railLinks.forEach(link => link.classList.toggle("active", link.dataset.section === visibleEntry.target.id));
-}, { rootMargin: "-28% 0px -58% 0px", threshold: [0, 0.1, 0.3] });
-sections.forEach(section => sectionObserver.observe(section));
+const updateRail = () => {
+  const readingLine = window.scrollY + window.innerHeight * .32;
+  let currentSection = sections[0];
+  sections.forEach(section => {
+    if (section.offsetTop <= readingLine) currentSection = section;
+  });
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 8) {
+    currentSection = sections[sections.length - 1];
+  }
+  railLinks.forEach(link => link.classList.toggle("active", link.dataset.section === currentSection.id));
+};
+window.addEventListener("scroll", updateRail, { passive: true });
+updateRail();
 
 observeReveals();

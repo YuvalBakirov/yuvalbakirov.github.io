@@ -1,8 +1,28 @@
 export const capabilities = [
-  { title: "Analytics & BI", items: "SQL / Power BI / Excel / KPI reporting" },
-  { title: "Machine Learning", items: "Classification / Forecasting / Recommenders" },
-  { title: "Data Engineering", items: "Python / Pandas / NumPy / Validation" },
-  { title: "AI & Automation", items: "LLMs / Embeddings / Vector search / Workflows" },
+  {
+    title: "Analytics & data",
+    icon: "01",
+    description: "Analysis, dashboards, KPIs, data quality, and repeatable processing workflows.",
+    tools: ["SQL", "Python", "Power BI", "Excel", "Pandas", "R"],
+  },
+  {
+    title: "Machine learning & statistics",
+    icon: "02",
+    description: "Classification, forecasting, recommenders, evaluation, regression, and econometrics.",
+    tools: ["Scikit-learn", "Forecasting", "Classification", "Statistics", "Econometrics"],
+  },
+  {
+    title: "Applied AI & automation",
+    icon: "03",
+    description: "Practical workflows with LLMs, embeddings, vector search, and Python automation.",
+    tools: ["LLMs", "Embeddings", "Qdrant", "Vector search", "Automation"],
+  },
+  {
+    title: "Software & collaboration",
+    icon: "04",
+    description: "Git, GitHub, algorithms, object-oriented programming, C#, and clear team collaboration.",
+    tools: ["Git", "GitHub", "Algorithms", "OOP", "C#", "Teamwork"],
+  },
 ];
 
 export const experience = [
@@ -11,7 +31,13 @@ export const experience = [
     role: "Data Specialist",
     organization: "Check Point Software",
     logo: "assets/organizations/checkpoint.svg",
-    summary: "Enterprise analytics, dashboards, KPI reporting, data-quality investigation, and Python/AI automation.",
+    summary: "I work with enterprise data to make reporting clearer, improve data reliability, and help teams make informed decisions.",
+    details: [
+      "Analyze structured datasets with SQL, Python, Excel, and Power BI to answer business questions and generate practical insights.",
+      "Build dashboards and recurring reports that track KPIs, surface trends, and improve visibility into operational performance.",
+      "Investigate data-quality issues, trace their root causes, reconcile inconsistencies, and strengthen the accuracy and reliability of reporting.",
+      "Use Python automation and AI-assisted tools to simplify repetitive workflows, reduce manual effort, and make day-to-day processes more efficient.",
+    ],
     tags: ["SQL", "Python", "Power BI", "Data Quality", "Automation"],
   },
   {
@@ -19,7 +45,13 @@ export const experience = [
     role: "AI Engineer Intern",
     organization: "Checkmarx / CodeMatch",
     logo: "assets/organizations/checkmarx.svg",
-    summary: "Built and evaluated an LLM-based semantic code-similarity system using embeddings, benchmark datasets, and vector search.",
+    summary: "I developed CodeMatch, an applied-AI system designed to identify semantic similarity between code snippets beyond simple text matching.",
+    details: [
+      "Developed an LLM-based code-similarity workflow using embeddings and vector search to represent and compare the meaning of source code.",
+      "Built data-retrieval workflows and benchmark datasets used to evaluate model quality, compare results, and guide performance improvements.",
+      "Worked with structured datasets, databases, embedding pipelines, and Qdrant to store and retrieve code representations efficiently.",
+      "Reviewed system outputs, identified performance gaps, and used data-driven adjustments to improve the reliability of the results.",
+    ],
     tags: ["LLMs", "Embeddings", "Qdrant", "Evaluation", "Python"],
   },
   {
@@ -27,7 +59,12 @@ export const experience = [
     role: "Arrow Interception Team Leader",
     organization: "Israeli Air Force",
     logo: "assets/organizations/israeli-air-force.svg",
-    summary: "Led an eight-member technical team supporting mission-critical system readiness.",
+    summary: "I led an eight-member technical team responsible for the readiness of mission-critical defense systems in a demanding operational environment.",
+    details: [
+      "Oversaw the monitoring, maintenance, and operational readiness of complex technical systems where accuracy, discipline, and dependable execution were essential.",
+      "Coordinated the work of an eight-member team and helped maintain a clear, responsible approach during routine activity and time-sensitive situations.",
+      "The role strengthened my leadership, technical problem-solving, communication, and ability to stay focused while working with high-responsibility systems.",
+    ],
     tags: ["Leadership", "Technical Operations", "Team Coordination"],
   },
 ];
@@ -173,27 +210,63 @@ export const education = [
     years: "2021 - 2024",
     title: "B.Sc. in Digital Sciences and Economics",
     school: "Tel Aviv University",
-    logo: "assets/organizations/tel-aviv-university.jpg",
-    note: "2024 Dean's List / Data science, machine learning, statistics, databases, algorithms, economics, and business-oriented problem solving.",
+    logo: "assets/organizations/tel-aviv-university.png",
+    achievement: "2024 Dean's List",
+    note: "A degree that combined quantitative technology studies with economics and business-oriented problem solving.",
+    details: [
+      "Coursework included data science, machine learning, SQL and databases, data analysis, statistics, algorithms, programming, and economics.",
+      "Built a strong foundation in statistical modeling and economic analysis while learning to connect technical results with real business and policy questions.",
+      "Applied the material through projects in forecasting, recommendation systems, NLP, econometrics, security classification, and large-scale data analysis.",
+    ],
   },
   {
     years: "2017 - 2018",
     title: "Diploma in Software Engineering",
     school: "Hakfar Hayarok College",
     logo: "assets/organizations/hakfar-hayarok.png",
-    note: "Graduated with honors / Software engineering foundations and object-oriented development.",
+    achievement: "Graduated with honors",
+    note: "Built my early software-engineering foundation through programming, algorithms, and object-oriented development.",
+    details: [
+      "Developed practical experience in C#, object-oriented programming, application structure, debugging, and turning requirements into working software.",
+      "Completed the Bubble Trouble game project with MonoGame and XNA, combining gameplay logic, dynamic obstacles, power-ups, and bot behavior.",
+      "This training continues to support the way I approach data and AI work: with attention to structure, maintainability, and reliable implementation.",
+    ],
   },
   {
     years: "2015 - 2017",
     title: "Matriculation Certificate, Computer Science and Physics",
     school: "Ephraim Katzir High School, Holon",
     logo: "assets/organizations/ephraim-katzir.png",
-    note: "Graduated with honors with a matriculation average of 112. Majored in Computer Science (10 units) and Physics (5 units), with advanced English and Mathematics (5 units each).",
+    achievement: "Graduated with honors / Matriculation average: 112",
+    note: "An advanced academic track that established my interest in analytical thinking, technology, and problem solving.",
+    details: [
+      "Majored in Computer Science at the 10-unit level and Physics at the 5-unit level.",
+      "Completed advanced Mathematics and English at the 5-unit level.",
+      "Graduated with honors and a matriculation average of 112.",
+    ],
   },
 ];
 
 export const certifications = [
-  { logo: "assets/certifications/google.png", title: "Google AI Essentials Specialization", issuer: "Google", issued: "Issued June 2026" },
-  { logo: "assets/certifications/aws-wordmark.png", title: "AWS Academy Cloud Developing", issuer: "Amazon Web Services", issued: "Issued March 2024" },
-  { logo: "assets/certifications/microsoft.png", title: "Microsoft Certified: Azure AI Fundamentals", issuer: "Microsoft", issued: "Issued October 2023 / Credential ID F4BAC2D190C921AB" },
+  {
+    logo: "assets/certifications/google.png",
+    title: "Google AI Essentials Specialization",
+    issuer: "Google",
+    issued: "Issued June 2026",
+    description: "Practical training in using generative AI responsibly and effectively, including prompting, evaluating outputs, and incorporating AI tools into everyday research, writing, analysis, and productivity workflows.",
+  },
+  {
+    logo: "assets/certifications/aws-wordmark.png",
+    title: "AWS Academy Cloud Developing",
+    issuer: "Amazon Web Services",
+    issued: "Issued March 2024",
+    description: "Hands-on cloud-development training covering the foundations of building applications with AWS services, working with cloud resources, and understanding the security, deployment, and architectural considerations of cloud-based solutions.",
+  },
+  {
+    logo: "assets/certifications/microsoft.png",
+    title: "Microsoft Certified: Azure AI Fundamentals",
+    issuer: "Microsoft",
+    issued: "Issued October 2023 / Credential ID F4BAC2D190C921AB",
+    description: "Validates foundational knowledge of AI and machine-learning concepts, common AI workloads, responsible AI principles, and the role of Microsoft Azure services in building AI solutions.",
+  },
 ];
