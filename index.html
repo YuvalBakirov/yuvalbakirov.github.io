@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Yuval Bakirov | Data, Analytics & AI</title>
+  <meta name="description" content="Yuval Bakirov's portfolio: data analysis, machine learning, applied AI, automation, and software projects.">
+  <meta name="author" content="Yuval Bakirov">
+  <meta property="og:title" content="Yuval Bakirov | Data, Analytics & AI">
+  <meta property="og:description" content="Projects and experience across data, analytics, machine learning, AI, and automation.">
+  <meta property="og:image" content="https://yuvalbakirov.github.io/assets/yuval-profile.webp">
+  <meta property="og:url" content="https://yuvalbakirov.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yuvalbakirov.github.io/">
+  <link rel="icon" href="assets/yuval-profile.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Yuval Bakirov home"><span>YB</span><b>Yuval Bakirov</b></a>
+    <nav aria-label="Primary navigation">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" aria-label="Switch color theme" title="Switch color theme">
+      <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.7A9 9 0 1 1 11.3 3a7 7 0 0 0 9.7 9.7Z"></path></svg>
+    </button>
+  </header>
+
+  <aside class="section-rail" aria-label="Page progress">
+    <a href="#top" data-section="top" class="active"><span></span><b>Intro</b></a>
+    <a href="#projects" data-section="projects"><span></span><b>Projects</b></a>
+    <a href="#experience" data-section="experience"><span></span><b>Experience</b></a>
+    <a href="#education" data-section="education"><span></span><b>Education</b></a>
+    <a href="#contact" data-section="contact"><span></span><b>Contact</b></a>
+  </aside>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <p class="hero-kicker">Hello, I'm</p>
+        <h1>Yuval Bakirov.</h1>
+        <p class="hero-role">Data, analytics and applied AI.</p>
+        <p class="hero-lead">I work with data to answer questions, improve processes, and build practical tools people can use.</p>
+        <div class="focus-list" aria-label="Core skills">
+          <span>SQL</span><span>Python</span><span>Power BI</span><span>Machine Learning</span><span>AI Automation</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button" href="#projects">See my projects</a>
+          <a class="text-link" href="https://www.linkedin.com/in/yuval-bakirov/" target="_blank" rel="noreferrer">LinkedIn &#8599;</a>
+          <a class="text-link" href="https://github.com/YuvalBakirov" target="_blank" rel="noreferrer">GitHub &#8599;</a>
+        </div>
+      </div>
+      <div class="portrait-wrap reveal">
+        <div class="portrait-backdrop"></div>
+        <img src="assets/yuval-profile.webp" alt="Portrait of Yuval Bakirov" class="portrait">
+        <div class="location-chip"><span></span>Based in Israel</div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="section-heading">
+        <div><p class="section-kicker">Portfolio</p><h2>Projects I've built</h2></div>
+        <p>A quick view of my work across machine learning, analytics, AI, and software. Select any project to see more.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All 12</button>
+        <button class="filter" data-filter="ai">AI</button>
+        <button class="filter" data-filter="machine-learning">Machine Learning</button>
+        <button class="filter" data-filter="analytics">Analytics</button>
+        <button class="filter" data-filter="software">Software</button>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="section-heading">
+        <div><p class="section-kicker">Professional background</p><h2>Experience</h2></div>
+        <p>Shown from my current role to my earliest experience.</p>
+      </div>
+      <div class="experience-timeline" id="experience-list"></div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="section-heading">
+        <div><p class="section-kicker">Learning</p><h2>Education</h2></div>
+        <p>Academic foundations and certifications across data, software, cloud, and AI.</p>
+      </div>
+      <div class="education-layout">
+        <div class="education-list" id="education-list"></div>
+        <div class="certifications" id="certification-list"></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <p class="section-kicker">Contact</p>
+        <h2>Let's talk.</h2>
+        <p>Have a question or want to work together? Feel free to reach out.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="button" href="mailto:yuvalbakirov@gmail.com">Send an email</a>
+        <a class="text-link" href="https://www.linkedin.com/in/yuval-bakirov/" target="_blank" rel="noreferrer">LinkedIn &#8599;</a>
+        <a class="text-link" href="https://github.com/YuvalBakirov" target="_blank" rel="noreferrer">GitHub &#8599;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>&copy; <span id="year"></span> Yuval Bakirov</span><span>Data, analytics and applied AI.</span></footer>
+  <script type="module" src="index.js?v=5"></script>
+</body>
+</html>
