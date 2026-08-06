@@ -1,4 +1,4 @@
-import { capabilities, experience, projects, education, certifications } from "./user-data/data.js?v=13";
+import { capabilities, experience, projects, education, certifications } from "./user-data/data.js?v=14";
 
 const $ = (selector) => document.querySelector(selector);
 const labels = { ai: "AI", "machine-learning": "Machine learning", analytics: "Analytics", software: "Software" };
@@ -37,7 +37,10 @@ const renderProjects = (filter = "all") => {
         <p>${project.description}</p>
         <div class="project-footer">
           <div class="tag-list compact-tags">${project.tags.slice(0, 3).map(tag => `<span>${tag}</span>`).join("")}</div>
-          <a class="project-arrow" href="${project.url}" target="_blank" rel="noreferrer" aria-label="Open ${project.title}">&#8599;</a>
+          <div class="project-actions">
+            ${project.secondaryUrl ? `<a class="project-mini-link" href="${project.secondaryUrl}" target="_blank" rel="noreferrer" aria-label="Open ${project.title} ${project.secondaryLabel}">${project.secondaryLabel}</a>` : ""}
+            <a class="project-arrow" href="${project.url}" target="_blank" rel="noreferrer" aria-label="Open ${project.title}">&#8599;</a>
+          </div>
         </div>
       </div>
     </article>`).join("");

@@ -166,6 +166,9 @@ img { display: block; max-width: 100%; }
 .tag-list span { padding: 5px 8px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 8%, transparent); color: var(--ink-2); font-size: .64rem; font-weight: 700; }
 .compact-tags { min-width: 0; flex-wrap: nowrap; overflow: hidden; }
 .compact-tags span { padding: 3px 6px; font-size: .56rem; white-space: nowrap; }
+.project-actions { display: flex; flex: none; align-items: center; gap: 5px; }
+.project-mini-link { padding: 4px 7px; border: 1px solid color-mix(in srgb, var(--card-accent) 34%, var(--line)); border-radius: 8px; color: var(--card-accent); font-size: .56rem; font-weight: 800; }
+.project-mini-link:hover { background: color-mix(in srgb, var(--card-accent) 9%, var(--surface)); }
 .project-arrow { display: grid; width: 25px; height: 25px; flex: none; place-items: center; border-radius: 8px; background: var(--soft); color: var(--accent); font-size: .76rem; font-weight: 800; }
 
 .experience-section { max-width: none; background: var(--soft); }
