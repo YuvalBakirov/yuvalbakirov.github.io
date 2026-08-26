@@ -98,6 +98,18 @@ export const projects = [
     outcome: "Detection framework",
   },
   {
+    title: "Delivery Pricing Analytics",
+    period: "2026",
+    category: "analytics",
+    image: "assets/projects/delivery-pricing-analytics.png",
+    imageFit: "contain",
+    imageBackground: "#000000",
+    url: "https://github.com/YuvalBakirov/delivery-pricing-analytics-case-study",
+    description: "Business analytics case study evaluating how delivery-price changes affect demand, contribution margin, and projected net income through Excel analysis, SQL, visualizations, and pricing scenarios.",
+    tags: ["Excel", "SQL", "Pricing Strategy", "Data Visualization"],
+    outcome: "Pricing recommendation",
+  },
+  {
     title: "Uber ESB Demand Prediction",
     period: "Feb - Oct 2024",
     category: "machine-learning",
