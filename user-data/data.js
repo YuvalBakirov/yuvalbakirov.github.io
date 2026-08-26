@@ -114,6 +114,8 @@ export const projects = [
     period: "2026",
     category: "analytics",
     image: "assets/projects/credit-default-driver-analysis.png",
+    imageFit: "contain",
+    imageBackground: "#ffffff",
     url: "https://github.com/YuvalBakirov/credit-default-driver-analysis",
     description: "Business-facing credit-risk analysis of customer characteristics associated with next-month default, using Excel-based univariate analysis, derived cash-flow measures, validation checks, and data storytelling.",
     tags: ["Excel", "Credit Risk", "Data Analysis", "Business Communication"],
