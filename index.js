@@ -1,4 +1,4 @@
-import { capabilities, experience, projects, education, certifications } from "./user-data/data.js?v=15";
+import { capabilities, experience, projects, education, certifications } from "./user-data/data.js?v=16";
 
 const $ = (selector) => document.querySelector(selector);
 const labels = { ai: "AI", "machine-learning": "Machine learning", analytics: "Analytics", "data-engineering": "Data engineering", software: "Software" };
