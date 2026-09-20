@@ -1,7 +1,7 @@
 import { capabilities, experience, projects, education, certifications } from "./user-data/data.js?v=15";
 
 const $ = (selector) => document.querySelector(selector);
-const labels = { ai: "AI", "machine-learning": "Machine learning", analytics: "Analytics", software: "Software" };
+const labels = { ai: "AI", "machine-learning": "Machine learning", analytics: "Analytics", "data-engineering": "Data engineering", software: "Software" };
 
 $("#capability-grid").innerHTML = capabilities.map((item, index) => `
   <article class="capability-card reveal" style="--delay:${index * 55}ms">

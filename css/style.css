@@ -149,6 +149,7 @@ img { display: block; max-width: 100%; }
 .project-card.category-ai { --card-accent: #7b61b6; }
 .project-card.category-machine-learning { --card-accent: #257cb3; }
 .project-card.category-analytics { --card-accent: #168b76; }
+.project-card.category-data-engineering { --card-accent: #2563eb; }
 .project-card.category-software { --card-accent: #d37b38; }
 .project-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: var(--shadow); }
 .project-thumb { display: block; width: 108px; height: 108px; align-self: center; overflow: hidden; border-radius: 14px; background: var(--image-background, #edf2f7); }
